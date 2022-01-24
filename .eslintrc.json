@@ -14,6 +14,24 @@
 	"plugins": ["react"],
 	"rules": {
 		"react/react-in-jsx-scope": "off",
-		"no-unused-vars": "warn"
+		"no-unused-vars": "warn",
+
+		// https://stackoverflow.com/a/65230468
+		"jsx-a11y/label-has-associated-control": [
+			"error",
+			{
+				"required": {
+					"some": ["nesting", "id"]
+				}
+			}
+		],
+		"jsx-a11y/label-has-for": [
+			"error",
+			{
+				"required": {
+					"some": ["nesting", "id"]
+				}
+			}
+		]
 	}
 }
