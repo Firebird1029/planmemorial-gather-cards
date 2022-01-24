@@ -7,7 +7,25 @@ function Designer() {
 			<div className="container">
 				<div className="columns">
 					<div className="column is-8 has-text-centered">
-						<img src={bg1} alt="Background 1" />
+						<div style={{ position: "relative", zIndex: 1 }}>
+							<img src={bg1} alt="Background 1" />
+							<div
+								className="container"
+								style={{
+									position: "absolute",
+									top: 0,
+									zIndex: 3,
+									width: "100%",
+									height: "100%",
+									display: "flex",
+									justifyContent: "center",
+									alignItems: "center",
+									backgroundColor: "rgba(255, 255, 255, 0.5)",
+								}}
+							>
+								hi
+							</div>
+						</div>
 					</div>
 					<div className="column is-4 has-text-centered">
 						<div className="container has-text-left">
