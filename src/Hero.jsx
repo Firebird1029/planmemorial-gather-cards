@@ -12,7 +12,7 @@ function Hero() {
 					Online Invitation Card Designer &nbsp;
 					<i className="far fa-heart" />
 				</p>
-				<div classNameName="content">
+				<div className="content">
 					With Gather, you can create your own personalized invitation cards in an instant! Choose your
 					favorite card design, enter your personalized text, and then download your card as a PDF. You also
 					have the option to send it to friends and family members via email or SMS, right from the website!

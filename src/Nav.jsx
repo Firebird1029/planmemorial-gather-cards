@@ -44,7 +44,7 @@ function Nav() {
 					</div> */}
 				</div>
 
-				<div className="navbar-end">
+				{/* <div className="navbar-end">
 					<div className="navbar-item">
 						<div className="buttons">
 							<a href="/" className="button is-primary">
@@ -55,7 +55,7 @@ function Nav() {
 							</a>
 						</div>
 					</div>
-				</div>
+				</div> */}
 			</div>
 		</nav>
 	);
