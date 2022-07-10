@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import bg1 from "./backgrounds/1.jpg";
 
 function Designer() {
+	const [designerFormEventName, setDesignerFormEventName] = useState("");
+	const [designerFormName, setDesignerFormName] = useState("");
+	const [designerFormEmail, setDesignerFormEmail] = useState("");
+	// const [computedOverlay, setComputedOverlay] = useState("");
+
+	// useEffect(() => {
+	// 	setComputedOverlay(`${designerFormName}\n\n${designerFormEmail}`);
+	// }, [designerFormName, designerFormEmail]);
+
 	return (
 		<section className="section">
 			<div className="container">
@@ -18,12 +27,25 @@ function Designer() {
 									width: "100%",
 									height: "100%",
 									display: "flex",
+									flexDirection: "column",
 									justifyContent: "center",
 									alignItems: "center",
 									backgroundColor: "rgba(255, 255, 255, 0.5)",
+									// whiteSpace: "pre-line",
+									overflowY: "hidden",
 								}}
 							>
-								hi
+								<p style={{ opacity: designerFormName ? 1 : 0 }}>{designerFormName || "."}</p>
+								<br />
+								<br />
+								<br />
+								<p style={{ opacity: designerFormEventName ? 1 : 0 }}>
+									<strong>{designerFormEventName || "."}</strong>
+								</p>
+								<br />
+								<br />
+								<br />
+								<p style={{ opacity: designerFormEmail ? 1 : 0 }}>{designerFormEmail || "."}</p>
 							</div>
 						</div>
 					</div>
@@ -34,20 +56,37 @@ function Designer() {
 
 							<div className="field">
 								<label className="label" htmlFor="name">
-									Name
+									Event Name
 								</label>
 								<div className="control">
 									<input
 										className="input"
 										type="text"
-										placeholder="e.g Alex Smith"
+										placeholder="e.g. Sam's Birthday Party"
+										id="designerFormEventName"
+										value={designerFormEventName}
+										onChange={(e) => setDesignerFormEventName(e.target.value)}
+									/>
+								</div>
+							</div>
+							<div className="field">
+								<label className="label" htmlFor="name">
+									Your Name
+								</label>
+								<div className="control">
+									<input
+										className="input"
+										type="text"
+										placeholder="e.g. Alex Smith"
 										id="designerFormName"
+										value={designerFormName}
+										onChange={(e) => setDesignerFormName(e.target.value)}
 									/>
 								</div>
 							</div>
 							<div className="field">
 								<label className="label" htmlFor="email">
-									Email
+									Your Email
 								</label>
 								<div className="control">
 									<input
@@ -55,6 +94,8 @@ function Designer() {
 										type="email"
 										placeholder="e.g. alexsmith@gmail.com"
 										id="designerFormEmail"
+										value={designerFormEmail}
+										onChange={(e) => setDesignerFormEmail(e.target.value)}
 									/>
 								</div>
 							</div>
